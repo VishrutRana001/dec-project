@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgb(0, 0, 0,0.75)),url(images.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.loginbox{
+    width: auto;
+    height: auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.5),rgb(0, 0, 0,0.5));
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.loginbox input[type="number"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="button"]{
+    width: 2;
+    border: none;
+    outline: none;
+    height: 40px;
+    text-transform: uppercase;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: 1s;
+}
+.loginbox input[type="button"]:hover{
+    width: 100%;
+    cursor: pointer;
+    background: #dc1b1b7e;
+    color: #000;
+}
+#frm-mobile-verification{
+    padding: 30px;
+    text-align: center;
+}
+.error{
+    color: #483333;
+    padding: 10px;
+    background: linear-gradient(rgb(181, 48, 48));
+    border: #efb0b0 1px solid;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 350px;
+    display: none;
+    box-sizing: border-box;
+}
+.success{
+    color: #483333;
+    padding: 10px 20px;
+    background: linear-gradient(rgb(181,48,48));
+    border: #bce4a3 1px solid;
+    border-radius: 3px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 350px;
+    display: none;
+    box-sizing: border-box;
+}
