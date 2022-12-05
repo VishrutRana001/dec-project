@@ -75,10 +75,11 @@ h1{
     margin: 0;
     padding: 0;
     font-weight: bold;
+    font-size: 25px;
 }
 .loginbox input{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .loginbox input[type="text"],input[type="password"],input[type="number"]{
     border: none;
@@ -145,4 +146,13 @@ h1{
     transform: rotateY(180deg);
     position: absolute;
     left: 50px;
+}
+.front label,.back label{
+    padding: 8px 6px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+.front label:hover,.back label:hover{
+    color: #ff0000;
 }
