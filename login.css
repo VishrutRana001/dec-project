@@ -53,8 +53,8 @@
     width: 100%;
 }
 .loginbox{
-    width: 320px;
-    height: 420px;
+    width: auto;
+    height: auto;
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgb(0, 0, 0,0.5));
     color: #fff;
     top: 50%;
@@ -80,7 +80,7 @@ h1{
     width: 100%;
     margin-bottom: 20px;
 }
-.loginbox input[type="text"],input[type="password"]{
+.loginbox input[type="text"],input[type="password"],input[type="number"]{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -114,6 +114,35 @@ h1{
     line-height: 20px;
     color: rgb(22, 108, 227);
 }
-
-
-
+#chk{
+    display: none;
+}
+#chk:checked~.content{
+    animation: 2s amimate;
+    transform: rotateY(180deg);
+}
+.content{
+    width: auto;
+    height: auto;
+    transform-style: preserve-3d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    transition: transform 1s cubic-bezier(0.75,0,0.85,1);
+    border-radius: 8px;
+}
+.front,.back{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    background-repeat: linear-gradient(rgba(0, 0, 0, 0.5),rgb(0, 0, 0,0.5));
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    border-radius: 8px;
+}
+.back{
+    transform: rotateY(180deg);
+    position: absolute;
+    left: 50px;
+}
