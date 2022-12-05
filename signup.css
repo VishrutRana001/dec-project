@@ -51,11 +51,11 @@
     width: 100%;
 }
 .loginbox{
-    width: auto;
-    height: auto;
+    width: 80%;
+    height: 80%;
     background: linear-gradient(rgba(0, 0, 0, 0.5),rgb(0, 0, 0,0.5));
     color: #fff;
-    top: 50%;
+    top: 55%;
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
@@ -65,7 +65,7 @@
 
 h1{
     margin: 0;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
     text-align: center;
     font-size: 22px;
 }
@@ -75,7 +75,7 @@ h1{
     font-weight: bold;
 }
 .loginbox input{
-    width: 100%;
+    width: 50%;
     margin-bottom: 20px;
 }
 .loginbox input[type="text"],input[type="password"],input[type="number"],input[type="email"]{
