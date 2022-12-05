@@ -89,6 +89,7 @@ h1{
     height: 20px;
     color: #fff;
     font-size: 16px;
+    width: 90%;
 }
 .loginbox input[type="submit"]{
     width: 2;
@@ -155,4 +156,13 @@ h1{
 }
 .front label:hover,.back label:hover{
     color: #ff0000;
+}
+.eye{
+    position: absolute;
+}
+#show{
+    display: none;
+}
+#myInput:hover{
+    width: 90%;
 }

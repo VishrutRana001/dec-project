@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>VR.com</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -31,7 +32,11 @@
                     <p>Username</p>
                     <input type="text" name="" placeholder="Enter Username">
                     <p>Password</p>
-                    <input type="password" name="" placeholder="Enter Password">
+                    <input type="password" name="" id="myInput" placeholder="Enter Password">
+                    <span class="eye" onmouseover="myFunction()">
+                        <i id="show" class="fa fa-eye"></i>
+                        <i id="hide" class="fa fa-eye-slash"></i>
+                    </span>
                     <input type="submit" name="" value="Login">
                     <!-- <a href="forgot.html"> -->
                     <label for="chk" aria-hidden="true">Forgot Password?</label>
@@ -50,6 +55,23 @@
             </div>
         </div>
     </div>
+    <script>
+        function myFunction(){
+            var x = document.getElementById("myInput");
+            var y = document.getElementById("show");
+            var z = document.getElementById("hide");
+            if(x.type=='password'){
+                x.type="text";
+                y.style.display="block";
+                z.style.display="none";
+            }
+            else{
+                x.type="password";
+                y.style.display="none";
+                z.style.display="block";
+            }
+        }
+    </script>
 </body>
 
 </html>
