@@ -47,6 +47,9 @@
     bottom: -2px;
     transition: 0.9s;
 }
+.navbar ul li a:hover{
+    color: orange;
+}
 .navbar ul li a:hover::after{
     width: 100%;
 }
