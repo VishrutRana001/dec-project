@@ -61,7 +61,7 @@ class Textlocal{
                 foreach($result->errors as $error){
                     switch($error->code){
                         default:
-                            throw new Exception($error-> message)
+                            throw new Exception($error-> message);
                     }
                 }
             }
@@ -79,6 +79,27 @@ class Textlocal{
         
         //Initialize handle
         $ch=cure_init($url);
-        curl_setopt_array($ch,array())
+        curl_setopt_array($ch,array());
+    }
+    public function sendSms($numbers,$message,$sender,$sched= null ,$test =false,$receiptURL=null,$custom=null,$optouts=false,$sampeReplyService=false){
+        if(!is_array($numbers))
+            throw new Exception('Invalid $numbers format.Must be an array');
+        if(empty($message))
+            throw new Exception(('Empty message'));
+        if(empty($sender))
+            throw new Exception('Empty sender name');
+        if(!is_null($sched)&&!is_numeric($sched))
+            throw new Exception(('Invalid date format. Use numeric epoch format'));
+        $params= array(
+            'message'       => rawurlencode(message),
+            'numbers'       => implode(',',$numbers),
+            'semder'        => rawurlencode($sender),
+            'schedule_time' => $sched,
+            'test'          => $test,
+            'receipt_url'   => $receiptURL,
+            'custom'        =>$custom,
+            'optouts'       $optouts,
+            
+        )
     }
 }
