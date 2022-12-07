@@ -3,7 +3,7 @@
     padding: 0;
     font-size: sans-serif;
 }
-.banner{
+header{
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgb(0, 0, 0,0.75)),url(images.jpg);
@@ -13,6 +13,7 @@
 .logo{
     width: 120px;
     cursor: pointer;
+    font-size: 35px;
 }
 .navbar{
     width: 85%;
@@ -62,14 +63,14 @@
     position: absolute;
     transform: translate(-50%,-50%);
     box-sizing: border-box;
-    padding: 70px 30px;
+    padding: 40px 10px;
 }
 
-h1{
+h2{
     margin: 0;
     padding: 0 0 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
 }
 .loginbox p{
     margin: 0;
@@ -81,7 +82,7 @@ h1{
     width: 100%;
     margin-bottom: 30px;
 }
-.loginbox input[type="text"],input[type="password"],input[type="number"]{
+.loginbox input[type="text"],input[type="email"],input[type="password"],input[type="number"]{
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -107,7 +108,7 @@ h1{
     width: 100%;
     cursor: pointer;
     background: #dc1b1b7e;
-    color: #000;
+    color: rgb(0, 0, 0);
     
 }
 .loginbox a{
@@ -141,12 +142,13 @@ h1{
     backface-visibility: hidden;
     transform-style: preserve-3d;
     perspective: 1500px;
-    border-radius: 8px;
+    border-radius: 60px;
 }
 .back{
     transform: rotateY(180deg);
     position: absolute;
     left: 50px;
+    top:40px;
 }
 .front label,.back label{
     padding: 8px 6px;

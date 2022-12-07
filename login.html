@@ -9,46 +9,49 @@
 </head>
 
 <body>
-    <div class="banner">
-        <div class="navbar">
-            <h2 class="logo"><span>VR</span>.com</h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="bookhouse.html">Book House</a></li>
-                <li><a href="payrent.html">Pay Rent</a></li>
-                <li><a href="rent.html">Rent Home</a></li>
-                <li><a href="buy.html">Buy Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-            </ul>
+    <header>
+        <div class="banner">
+            <div class="navbar">
+                <h1 class="logo"><span>VR</span>.com</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bookhouse.html">Book House</a></li>
+                    <li><a href="payrent.html">Pay Rent</a></li>
+                    <li><a href="rent.html">Rent Home</a></li>
+                    <li><a href="buy.html">Buy Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </header>
     <div class="loginbox">
         <input type="checkbox" id="chk" aria-hidden="true" name="">
         <div class="content">
             <div class="front">
-                <h1>Login</h1>
+                <h2>Login</h2>
                 <form>
-                    <p>Username</p>
-                    <input type="text" name="" placeholder="Enter Username">
+                    <p>Email</p>
+                    <input type="email" name="" placeholder="Enter Email" id="email">
+                    <span id="text"></span>
                     <p>Password</p>
                     <input type="password" name="" id="myInput" placeholder="Enter Password">
-                    <span class="eye" onclick  ="myFunction()">
+                    <span class="eye" onclick="icon()">
                         <i id="show" class="fa fa-eye"></i>
                         <i id="hide" class="fa fa-eye-slash"></i>
                     </span>
                     <input type="submit" name="" value="Login">
-                    <!-- <a href="forgot.html"> -->
                     <label for="chk" aria-hidden="true">Forgot Password?</label>
-                    <!-- </a> -->
                     <h3>Create an acount: <a href="signup.html">Signup</a></h3>
                 </form>
             </div>
             <div class="back">
-                <h1>Forgot Password</h1>
+                <h2>Find Your Email</h2>
+                <p>Enter your</p>
                 <form>
-                    <p>Enter Registered Mobile Number</p>
-                    <input type="number" name="" placeholder="Enter Registered 10 Digit Mobile Number">
+                    <p class="pargraph">Enter Registered Email</p>
+                    <input type="number" name="" placeholder="Enter Registered Email" id="email">
+                    <span id="text"></span>
                     <input type="submit" name="" value="Get OTP">
                     <label for="chk" aria-hidden="true">Back</label>
                 </form>
@@ -56,19 +59,34 @@
         </div>
     </div>
     <script>
-        function myFunction(){
+        function icon() {
             var x = document.getElementById("myInput");
             var y = document.getElementById("show");
             var z = document.getElementById("hide");
-            if(x.type=='password'){
-                x.type="text";
-                y.style.display="block";
-                z.style.display="none";
+            if (x.type == 'password') {
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
             }
-            else{
-                x.type="password";
-                y.style.display="none";
-                z.style.display="block";
+            else {
+                x.type = "password";
+                y.style.display = "none";
+                z.style.display = "block";
+            }
+        }
+        function validation() {
+            var form = document.getElementById("form");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("text");
+            var pattern = /^[^]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email.match(pattern)) {
+                from.classList.add("valid")
+                from.classList.remove("invalid");
+            }
+            else {
+                form.classList.remove("valid");
+                form.classList.add("invalid");
+
             }
         }
     </script>
